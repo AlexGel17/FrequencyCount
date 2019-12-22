@@ -7,7 +7,7 @@ class FrequentCount:
 
     def __init__(self, method, fr, k):
         self.method = method
-        self.fr = re.sub(r'[^\w]', ' ', open(fr).read().lower()).split()
+        self.fr = fr
         self.k = int(k)
 
     def run(self):

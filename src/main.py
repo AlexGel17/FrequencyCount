@@ -1,7 +1,15 @@
-import sys
 from src.frequent_count import FrequentCount
 
 if __name__ == "__main__":
-    count = FrequentCount(sys.argv[1], sys.argv[2], sys.argv[3])
+
+    with open('/home/alex/Desktop/agf/Labor/University/Karl/FrequencyCount/t8.shakespeare.txt', 'r') as file:
+        inp = file.read()
+        inp = inp.split()
+
+    count = FrequentCount('frequent', inp, 10)
     a, b, c, d = count.run()
-    print(d)
+
+    print(a)
+    print('Most frequent seq:', b)
+    print('Shows on text:', c)
+    print('Time:', d)
